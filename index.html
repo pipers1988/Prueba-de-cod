@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Proceo de selección</title>
+</head>
+	<body>	
+	
+		<!-- Begind html5 -->
+		<section class="comprar">
+		 
+			<a class="button js-toggle-aside" href="#" title="Ver Aside">Click</a>
+	
+				
+			<div id="add_element"></div>
+			<script>
+				var elementTag = '';
+				var i = 0;
+				while (i < 10) {
+				    elementTag += 				    						
+					`<div class="cont_parraf">
+						<h2>e 1500s</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, esse! Saepe eum, inventore omnis eaque facere, corporis odit eveniet sunt, libero at commodi sint iusto fugit animi.  Sed, esse! Saepe eum, inventore omnis eaque facere, corporis odit eveniet sunt, libero at commodi sint iusto fugit animi.  Sed, esse! Saepe eum, inventore omnis eaque facere, corporis odit eveniet sunt, libero at commodi sint iusto fugit animi.</p>
+					</div>`;
+				    i++;
+				}
+				document.getElementById("add_element").innerHTML = elementTag;
+			</script>
+				
+		  
+		</section>
+
+		<aside class="asider js-cart">
+		  <div class="asider__header">
+		    <h1 class="asider__title">Elije una opción <span><em id="count_elemnt"></em> seleccionados</span></h1>
+			<i class="fa fa-times js-toggle-aside"></i>
+		  </div>
+		  
+		  <div class="asider__productos">
+		  	
+		  	<div class="js-cart-productos"></div>		  
+			<!--Begind Template Producto -->
+		    <div class="asider__product contenedor-plantilla">
+		    	<div class="js-create-element">	
+		    		<div class="box-red"></div>
+		    		<span>Berry</span>
+					<i class="fa fa-times js-remove-product"></i>				    
+			    </div>
+		    </div>
+
+			<!--End Template Producto -->
+			
+			
+			<!-- Begind Car -->
+			<div id="demo_dos"  class="productos__item"></div><!-- Aqui se agrega los Items Productos  -->
+			<script>
+				var elementTag02 = '';
+				var e = 0;
+				while (e < 8) {
+				    elementTag02 += 				    						
+					`<article class="producto">
+			        	<div class="cont_product_all">
+							<div class="sub_items_img"></div>
+							<p class="name_prod">Berry</p>	
+			        	</div>
+			          <a class="button js-add-product" href="#" title="Add to cart">ELÍGELO</a>
+			        </article>`;
+				    e++;
+				}
+				document.getElementById("demo_dos").innerHTML = elementTag02;
+			</script>
+			<!-- End Car -->
+
+		  </div>
+		  
+		</aside>
+
+		<div class="abrir_lightbox js-lightbox js-toggle-aside"></div>
+
+
+		<!-- End html5 -->
+	<script src="js/app.js"></script>
+	</body>	
+</html>
